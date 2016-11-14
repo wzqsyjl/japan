@@ -1,0 +1,46 @@
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>动画demo</title> 
+        <style type="text/css" rel="stylesheet"> 
+            body div{  
+                    background-image:url(image/donghua.png); background-repeat:no-repeat}  
+            .step1{background-position:0px 0px;}  
+            .step2{background-position:-111px 0px;}  
+            .step3{background-position:-222px 0px;}  
+            .step4{background-position:-333px 0px;}  
+            .step5{background-position:-444px 0px;}  
+            .step6{background-position:-555px 0px;}  
+            .step7{background-position:-666px 0px;}  
+            .step8{background-position:-777px 0px;}  
+        </style> 
+        <script type="text/javascript" src="js/jquery.min.js"></script> 
+        <script type="text/javascript"> 
+            var n=0;  
+            var t=1;
+            //持续设置图片旋转角度，使其显示旋转动画  
+            setInterval(function(){   
+                //$("#donghua").css({"position":"relative","left":-n+"px","background-position":n+"px 0px"});  
+                //$("#donghua").css({"position":"relative","left":0+"px","background-position":n+"px 0px"});
+                var obj = document.getElementById("donghua");
+                obj.className = "step"+t;
+                t=(t<8)?(t+1):1;
+                n=(-n<777)?n-111:-111;
+            },300);  
+        </script> 
+    </head> 
+    <body style="background-color:white;"> 
+        <!--<div class="step1" style="width:111px;height:57px;"></div> 
+        <div class="step2" style="width:111px;height:57px;"></div> 
+        <div class="step3" style="width:111px;height:57px;"></div> 
+        <div class="step4" style="width:111px;height:57px;"></div> 
+        <div class="step5" style="width:111px;height:57px;"></div> 
+        <div class="step6" style="width:111px;height:57px;"></div> 
+        <div class="step7" style="width:111px;height:57px;"></div> 
+        <div class="step8" style="width:111px;height:57px;"></div> 
+        <hr color="red"> -->
+        <div id="donghua" style="width:111px;height:57px;"> 
+        </div> 
+        <hr color="red"> 
+    </body> 
+</html>

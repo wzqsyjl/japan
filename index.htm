@@ -1,0 +1,463 @@
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>动画demo</title> 
+        <style type="text/css" rel="stylesheet"> 
+        /*字体样式*/
+        *{font-size:0.5cm;color:black;text-decoration:blink;text-align:center}
+        /*按钮样式*/
+        .btn {
+          display: inline-block;
+          background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+          padding: 8px 18px;
+          border-radius: 50px;
+          border: 2px solid rgba(0, 0, 0, 0.7);
+          border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+          border-top: 2px solid rgba(0, 0, 0, 1);
+          color: rgba(255, 255, 255, 0.8);
+          font-family: Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          font-size: 13px;
+          text-decoration: none;
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        .btn:hover {
+          background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+        }
+
+        .btn .icon {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin: 1px 8px 0 0;
+          float: left;
+        }
+
+        .btn-github .icon {
+          opacity: 0.6;
+          background: url("../images/blacktocat.png") 0 0 no-repeat;
+        }
+
+        .container {
+          width: 90%;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        /*动画样式*/
+            body{margin: 0 auto;}
+            div{  
+                margin: 0 auto;
+                    background-image:url(image/japan.jpg); background-repeat:no-repeat}  
+            .test{background-position:-393px -102px;width:40px;height:27px;};
+            
+            /*第1行*/
+            .jpping11{background-position:-10px -20px;width:25px;height:27px;}
+            .jpping11show{background-position:-10px -20px;width:40px;height:27px;}
+
+            .jpping12{background-position:-51px -20px;width:25px;height:27px;}
+            .jpping12show{background-position:-51px -20px;width:40px;height:27px;}
+
+            .jpping13{background-position:-92px -20px;width:25px;height:27px;}
+            .jpping13show{background-position:-92px -20px;width:40px;height:27px;}
+
+            .jpping14{background-position:-133px -20px;width:25px;height:27px;}
+            .jpping14show{background-position:-133px -20px;width:40px;height:27px;}
+
+            .jpping15{background-position:-174px -20px;width:25px;height:27px;}
+            .jpping15show{background-position:-174px -20px;width:40px;height:27px;}
+
+            .jppian11{background-position:-229px -20px;width:25px;height:27px;}
+            .jppian11show{background-position:-229px -20px;width:40px;height:27px;}
+
+            .jppian12{background-position:-270px -20px;width:25px;height:27px;}
+            .jppian12show{background-position:-270px -20px;width:40px;height:27px;}
+
+            .jppian13{background-position:-311px -20px;width:25px;height:27px;}
+            .jppian13show{background-position:-311px -20px;width:40px;height:27px;}
+
+            .jppian14{background-position:-352px -20px;width:25px;height:27px;}
+            .jppian14show{background-position:-352px -20px;width:40px;height:27px;}
+
+            .jppian15{background-position:-393px -20px;width:25px;height:27px;}
+            .jppian15show{background-position:-393px -20px;width:40px;height:27px;}
+
+            /*第2行*/
+            .jpping21{background-position:-10px -48px;width:25px;height:27px;}
+            .jpping21show{background-position:-10px -48px;width:40px;height:27px;}
+
+            .jpping22{background-position:-51px -48px;width:25px;height:27px;}
+            .jpping22show{background-position:-51px -48px;width:40px;height:27px;}
+
+            .jpping23{background-position:-92px -48px;width:25px;height:27px;}
+            .jpping23show{background-position:-92px -48px;width:40px;height:27px;}
+
+            .jpping24{background-position:-133px -48px;width:25px;height:27px;}
+            .jpping24show{background-position:-133px -48px;width:40px;height:27px;}
+
+            .jpping25{background-position:-174px -48px;width:25px;height:27px;}
+            .jpping25show{background-position:-174px -48px;width:40px;height:27px;}
+
+            .jppian21{background-position:-229px -48px;width:25px;height:27px;}
+            .jppian21show{background-position:-229px -48px;width:40px;height:27px;}
+
+            .jppian22{background-position:-270px -48px;width:25px;height:27px;}
+            .jppian22show{background-position:-270px -48px;width:40px;height:27px;}
+
+            .jppian23{background-position:-311px -48px;width:25px;height:27px;}
+            .jppian23show{background-position:-311px -48px;width:40px;height:27px;}
+
+            .jppian24{background-position:-352px -48px;width:25px;height:27px;}
+            .jppian24show{background-position:-352px -48px;width:40px;height:27px;}
+
+            .jppian25{background-position:-393px -48px;width:25px;height:27px;}
+            .jppian25show{background-position:-393px -48px;width:40px;height:27px;}
+            
+            /*第3行*/
+            .jpping31{background-position:-10px -76px;width:25px;height:27px;}
+            .jpping31show{background-position:-10px -76px;width:40px;height:27px;}
+
+            .jpping32{background-position:-51px -76px;width:25px;height:27px;}
+            .jpping32show{background-position:-51px -76px;width:40px;height:27px;}
+
+            .jpping33{background-position:-92px -76px;width:25px;height:27px;}
+            .jpping33show{background-position:-92px -76px;width:40px;height:27px;}
+
+            .jpping34{background-position:-133px -76px;width:25px;height:27px;}
+            .jpping34show{background-position:-133px -76px;width:40px;height:27px;}
+
+            .jpping35{background-position:-174px -76px;width:25px;height:27px;}
+            .jpping35show{background-position:-174px -76px;width:40px;height:27px;}
+
+            .jppian31{background-position:-229px -76px;width:25px;height:27px;}
+            .jppian31show{background-position:-229px -76px;width:40px;height:27px;}
+
+            .jppian32{background-position:-270px -76px;width:25px;height:27px;}
+            .jppian32show{background-position:-270px -76px;width:40px;height:27px;}
+
+            .jppian33{background-position:-311px -76px;width:25px;height:27px;}
+            .jppian33show{background-position:-311px -76px;width:40px;height:27px;}
+
+            .jppian34{background-position:-352px -76px;width:25px;height:27px;}
+            .jppian34show{background-position:-352px -76px;width:40px;height:27px;}
+
+            .jppian35{background-position:-393px -76px;width:25px;height:27px;}
+            .jppian35show{background-position:-393px -76px;width:40px;height:27px;}
+            
+            /*第4行*/
+            .jpping41{background-position:-10px -102px;width:25px;height:27px;}
+            .jpping41show{background-position:-10px -102px;width:40px;height:27px;}
+
+            .jpping42{background-position:-51px -102px;width:25px;height:27px;}
+            .jpping42show{background-position:-51px -102px;width:40px;height:27px;}
+
+            .jpping43{background-position:-92px -102px;width:25px;height:27px;}
+            .jpping43show{background-position:-92px -102px;width:40px;height:27px;}
+
+            .jpping44{background-position:-133px -102px;width:25px;height:27px;}
+            .jpping44show{background-position:-133px -102px;width:40px;height:27px;}
+
+            .jpping45{background-position:-174px -102px;width:25px;height:27px;}
+            .jpping45show{background-position:-174px -102px;width:40px;height:27px;}
+
+            .jppian41{background-position:-229px -102px;width:25px;height:27px;}
+            .jppian41show{background-position:-229px -102px;width:40px;height:27px;}
+
+            .jppian42{background-position:-270px -102px;width:25px;height:27px;}
+            .jppian42show{background-position:-270px -102px;width:40px;height:27px;}
+
+            .jppian43{background-position:-311px -102px;width:25px;height:27px;}
+            .jppian43show{background-position:-311px -102px;width:40px;height:27px;}
+
+            .jppian44{background-position:-352px -102px;width:25px;height:27px;}
+            .jppian44show{background-position:-352px -102px;width:40px;height:27px;}
+
+            .jppian45{background-position:-393px -102px;width:25px;height:27px;}
+            .jppian45show{background-position:-393px -102px;width:40px;height:27px;}
+            
+            /*第5行*/
+            .jpping51{background-position:-10px -130px;width:25px;height:27px;}
+            .jpping51show{background-position:-10px -130px;width:40px;height:27px;}
+
+            .jpping52{background-position:-51px -130px;width:25px;height:27px;}
+            .jpping52show{background-position:-51px -130px;width:40px;height:27px;}
+
+            .jpping53{background-position:-92px -130px;width:25px;height:27px;}
+            .jpping53show{background-position:-92px -130px;width:40px;height:27px;}
+
+            .jpping54{background-position:-133px -130px;width:25px;height:27px;}
+            .jpping54show{background-position:-133px -130px;width:40px;height:27px;}
+
+            .jpping55{background-position:-174px -130px;width:25px;height:27px;}
+            .jpping55show{background-position:-174px -130px;width:40px;height:27px;}
+
+            .jppian51{background-position:-229px -130px;width:25px;height:27px;}
+            .jppian51show{background-position:-229px -130px;width:40px;height:27px;}
+
+            .jppian52{background-position:-270px -130px;width:25px;height:27px;}
+            .jppian52show{background-position:-270px -130px;width:40px;height:27px;}
+
+            .jppian53{background-position:-311px -130px;width:25px;height:27px;}
+            .jppian53show{background-position:-311px -130px;width:40px;height:27px;}
+
+            .jppian54{background-position:-352px -130px;width:25px;height:27px;}
+            .jppian54show{background-position:-352px -130px;width:40px;height:27px;}
+
+            .jppian55{background-position:-393px -130px;width:25px;height:27px;}
+            .jppian55show{background-position:-393px -130px;width:40px;height:27px;}
+
+            /*第6行*/
+            .jpping61{background-position:-10px -158px;width:25px;height:27px;}
+            .jpping61show{background-position:-10px -158px;width:40px;height:27px;}
+
+            .jpping62{background-position:-51px -158px;width:25px;height:27px;}
+            .jpping62show{background-position:-51px -158px;width:40px;height:27px;}
+
+            .jpping63{background-position:-92px -158px;width:25px;height:27px;}
+            .jpping63show{background-position:-92px -158px;width:40px;height:27px;}
+
+            .jpping64{background-position:-133px -158px;width:25px;height:27px;}
+            .jpping64show{background-position:-133px -158px;width:40px;height:27px;}
+
+            .jpping65{background-position:-174px -158px;width:25px;height:27px;}
+            .jpping65show{background-position:-174px -158px;width:40px;height:27px;}
+
+            .jppian61{background-position:-229px -158px;width:25px;height:27px;}
+            .jppian61show{background-position:-229px -158px;width:40px;height:27px;}
+
+            .jppian62{background-position:-270px -158px;width:25px;height:27px;}
+            .jppian62show{background-position:-270px -158px;width:40px;height:27px;}
+
+            .jppian63{background-position:-311px -158px;width:25px;height:27px;}
+            .jppian63show{background-position:-311px -158px;width:40px;height:27px;}
+
+            .jppian64{background-position:-352px -158px;width:25px;height:27px;}
+            .jppian64show{background-position:-352px -158px;width:40px;height:27px;}
+
+            .jppian65{background-position:-393px -158px;width:25px;height:27px;}
+            .jppian65show{background-position:-393px -158px;width:40px;height:27px;}
+
+            /*第7行-ma*/
+            .jpping71{background-position:-10px -184px;width:25px;height:27px;}
+            .jpping71show{background-position:-10px -184px;width:40px;height:27px;}
+
+            .jpping72{background-position:-51px -184px;width:25px;height:27px;}
+            .jpping72show{background-position:-51px -184px;width:40px;height:27px;}
+
+            .jpping73{background-position:-92px -184px;width:25px;height:27px;}
+            .jpping73show{background-position:-92px -184px;width:40px;height:27px;}
+
+            .jpping74{background-position:-133px -184px;width:25px;height:27px;}
+            .jpping74show{background-position:-133px -184px;width:40px;height:27px;}
+
+            .jpping75{background-position:-174px -184px;width:25px;height:27px;}
+            .jpping75show{background-position:-174px -184px;width:40px;height:27px;}
+
+            .jppian71{background-position:-229px -184px;width:25px;height:27px;}
+            .jppian71show{background-position:-229px -184px;width:40px;height:27px;}
+
+            .jppian72{background-position:-270px -184px;width:25px;height:27px;}
+            .jppian72show{background-position:-270px -184px;width:40px;height:27px;}
+
+            .jppian73{background-position:-311px -184px;width:25px;height:27px;}
+            .jppian73show{background-position:-311px -184px;width:40px;height:27px;}
+
+            .jppian74{background-position:-352px -184px;width:25px;height:27px;}
+            .jppian74show{background-position:-352px -184px;width:40px;height:27px;}
+
+            .jppian75{background-position:-393px -184px;width:25px;height:27px;}
+            .jppian75show{background-position:-393px -184px;width:40px;height:27px;}
+
+            /*第8行-ya*/
+            .jpping81{background-position:-10px -212px;width:25px;height:27px;}
+            .jpping81show{background-position:-10px -212px;width:40px;height:27px;}
+
+            .jpping82{background-position:-51px -212px;width:25px;height:27px;}
+            .jpping82show{background-position:-51px -212px;width:40px;height:27px;}
+
+            .jpping83{background-position:-92px -212px;width:25px;height:27px;}
+            .jpping83show{background-position:-92px -212px;width:40px;height:27px;}
+
+            .jpping84{background-position:-133px -212px;width:25px;height:27px;}
+            .jpping84show{background-position:-133px -212px;width:40px;height:27px;}
+
+            .jpping85{background-position:-174px -212px;width:25px;height:27px;}
+            .jpping85show{background-position:-174px -212px;width:40px;height:27px;}
+
+            .jppian81{background-position:-229px -212px;width:25px;height:27px;}
+            .jppian81show{background-position:-229px -212px;width:40px;height:27px;}
+
+            .jppian82{background-position:-270px -212px;width:25px;height:27px;}
+            .jppian82show{background-position:-270px -212px;width:40px;height:27px;}
+
+            .jppian83{background-position:-311px -212px;width:25px;height:27px;}
+            .jppian83show{background-position:-311px -212px;width:40px;height:27px;}
+
+            .jppian84{background-position:-352px -212px;width:25px;height:27px;}
+            .jppian84show{background-position:-352px -212px;width:40px;height:27px;}
+
+            .jppian85{background-position:-393px -212px;width:25px;height:27px;}
+            .jppian85show{background-position:-393px -212px;width:40px;height:27px;}
+
+            /*第9行-la*/
+            .jpping91{background-position:-10px -240px;width:25px;height:27px;}
+            .jpping91show{background-position:-10px -240px;width:40px;height:27px;}
+
+            .jpping92{background-position:-51px -240px;width:25px;height:27px;}
+            .jpping92show{background-position:-51px -240px;width:40px;height:27px;}
+
+            .jpping93{background-position:-92px -240px;width:25px;height:27px;}
+            .jpping93show{background-position:-92px -240px;width:40px;height:27px;}
+
+            .jpping94{background-position:-133px -240px;width:25px;height:27px;}
+            .jpping94show{background-position:-133px -240px;width:40px;height:27px;}
+
+            .jpping95{background-position:-174px -240px;width:25px;height:27px;}
+            .jpping95show{background-position:-174px -240px;width:40px;height:27px;}
+
+            .jppian91{background-position:-229px -240px;width:25px;height:27px;}
+            .jppian91show{background-position:-229px -240px;width:40px;height:27px;}
+
+            .jppian92{background-position:-270px -240px;width:25px;height:27px;}
+            .jppian92show{background-position:-270px -240px;width:40px;height:27px;}
+
+            .jppian93{background-position:-311px -240px;width:25px;height:27px;}
+            .jppian93show{background-position:-311px -240px;width:40px;height:27px;}
+
+            .jppian94{background-position:-352px -240px;width:25px;height:27px;}
+            .jppian94show{background-position:-352px -240px;width:40px;height:27px;}
+
+            .jppian95{background-position:-393px -240px;width:25px;height:27px;}
+            .jppian95show{background-position:-393px -240px;width:40px;height:27px;}
+            
+            /*第10行-wa*/
+            .jpping101{background-position:-10px -268px;width:25px;height:27px;}
+            .jpping101show{background-position:-10px -268px;width:40px;height:27px;}
+
+            .jpping102{background-position:-51px -268px;width:25px;height:27px;}
+            .jpping102show{background-position:-51px -268px;width:40px;height:27px;}
+
+            .jpping103{background-position:-92px -268px;width:25px;height:27px;}
+            .jpping103show{background-position:-92px -268px;width:40px;height:27px;}
+
+            .jpping104{background-position:-133px -268px;width:25px;height:27px;}
+            .jpping104show{background-position:-133px -268px;width:40px;height:27px;}
+
+            .jpping105{background-position:-174px -268px;width:25px;height:27px;}
+            .jpping105show{background-position:-174px -268px;width:40px;height:27px;}
+
+            .jppian101{background-position:-229px -268px;width:25px;height:27px;}
+            .jppian101show{background-position:-229px -268px;width:40px;height:27px;}
+
+            .jppian102{background-position:-270px -268px;width:25px;height:27px;}
+            .jppian102show{background-position:-270px -268px;width:40px;height:27px;}
+
+            .jppian103{background-position:-311px -268px;width:25px;height:27px;}
+            .jppian103show{background-position:-311px -268px;width:40px;height:27px;}
+
+            .jppian104{background-position:-352px -268px;width:25px;height:27px;}
+            .jppian104show{background-position:-352px -268px;width:40px;height:27px;}
+
+            .jppian105{background-position:-393px -268px;width:25px;height:27px;}
+            .jppian105show{background-position:-393px -268px;width:40px;height:27px;}
+
+
+            }  
+        </style> 
+        <script type="text/javascript" src="js/jquery.min.js"></script> 
+        <script type="text/javascript"> 
+            function init()
+            {
+                document.getElementById('btnSelect').disabled = false;
+                document.getElementById('btnKey').disabled = false;
+                /*var obj = document.getElementById("donghua");
+                obj.className = "test";*/
+            };
+            var x=0; 
+            var y=0;
+            var wich = '';
+            var timer=0;
+            /*每隔dt=300ms执行一次*/
+            setInterval(function(){   
+                //$("#donghua").css({"position":"relative","left":-n+"px","background-position":n+"px 0px"});
+                /*核心Demo
+                var obj = document.getElementById("donghua");
+                obj.className = "test";
+                */
+                if(timer > 0)
+                {
+                    timer--;
+                    random_select();
+                }
+
+            },100);
+            function random_select() 
+            {
+                //jp+ping+10+1+show
+                //jp+pian+10+5+show
+                var ch = -1 + Math.floor(Math.random()*2);
+                console.log("select for wich:" + -ch);
+                wich = (-ch==1)?"ping":"pian";
+
+                var ch = 1 + Math.floor(Math.random()*10);
+                console.log("select for y:" + ch);
+                y = ch;
+                while(x_test());
+                Show();
+            }
+            function x_test() 
+            {
+                var ch = 1 + Math.floor(Math.random()*5);
+                if(y == 8)
+                {
+                    while((ch==2)||(ch==4))
+                    {
+                        var ch = 1 + Math.floor(Math.random()*5);
+                        console.log("random select for ch"+ch);
+                    }
+                }
+                else if(y == 10)
+                {
+                    while((ch==2)||(ch==3)||(ch==4))
+                    {
+                        var ch = 1 + Math.floor(Math.random()*5);
+                        console.log("random select for ch"+ch);
+                    }
+                }
+                console.log("select for x:" + ch);
+                x = ch;
+            }
+            function Show() 
+            {
+                var obj = document.getElementById("donghua");
+                var text = "jp"+""+wich+""+y+""+x+"";
+                obj.className = "jp"+""+wich+""+y+""+x+"";
+                console.log("output text is:"+text);
+            }
+            function Select()
+            {
+                timer = 10;
+            }
+            function Answer() 
+            {
+                var obj = document.getElementById("donghua");
+                var text = "jp"+""+wich+""+y+""+x+""+"show";
+                obj.className = "jp"+""+wich+""+y+""+x+""+"show";
+                console.log("let me answer:"+text);
+            }
+
+        </script> 
+    </head> 
+    <body style="background-color:white;" onload="init()"> 
+        <hr color="red" style="width:222px;height:2px;">
+        <p class="container">五十音图记忆</p>
+        <br/>
+        <div id="donghua"> 
+        </div> 
+        <br/>
+        <button id="btnSelect" class="btn" onClick="Select();">随机<br/>选取</button><span>    </span>
+        <button id="btnKey" class="btn" onClick="Answer();">结果<br/>展示</button>
+        <hr color="red" style="width:222px;height:2px;">
+    </body> 
+</html>
